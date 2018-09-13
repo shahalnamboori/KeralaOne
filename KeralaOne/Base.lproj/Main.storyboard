@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IfW-wL-elL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="csQ-CW-eGy">
+            <objects>
+                <navigationController id="IfW-wL-elL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wSV-3Z-FVE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LwX-ks-c3N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wcM-UX-USe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1163" y="-400"/>
+        </scene>
+        <!--SP_HomePage-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SP_HomePage" title="SP_HomePage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SP_HomePage" customModule="KeralaOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose which one to pay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4a-IZ-BE5">
+                                <rect key="frame" x="69" y="219.5" width="237" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="9mH-XO-Zh1"/>
+                                    <constraint firstAttribute="height" constant="21" id="gvi-RU-IQG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                <color key="textColor" red="0.1333333333" green="0.45110644849999998" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ol1-3t-YWh">
+                                <rect key="frame" x="112" y="332.5" width="150" height="30"/>
+                                <color key="backgroundColor" red="0.1333333333" green="0.45110644849999998" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lnz-ta-na3"/>
+                                    <constraint firstAttribute="width" constant="150" id="xYB-e4-vsL"/>
+                                </constraints>
+                                <state key="normal" title="PHONE BILL">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickedPhoneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="17U-x0-jVP"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Pbj-a4-jNr">
+                                <rect key="frame" x="177" y="291" width="20" height="20"/>
+                                <color key="color" red="0.1333333333" green="0.45110644849999998" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pki-Eq-e1p">
+                                <rect key="frame" x="112" y="286.5" width="150" height="30"/>
+                                <color key="backgroundColor" red="0.1333333333" green="0.45110644849999998" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="a2V-Yv-ft1"/>
+                                    <constraint firstAttribute="height" constant="30" id="vcM-8w-mAF"/>
+                                </constraints>
+                                <state key="normal" title="CURRENT BILL">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickedCurrentButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X1H-2h-HBM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="x4a-IZ-BE5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DAE-7t-tE5"/>
+                            <constraint firstItem="ol1-3t-YWh" firstAttribute="top" secondItem="pki-Eq-e1p" secondAttribute="bottom" constant="16" id="HdE-Ck-2fD"/>
+                            <constraint firstItem="Pbj-a4-jNr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YLr-YQ-zZ9"/>
+                            <constraint firstItem="ol1-3t-YWh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ys5-a5-1QV"/>
+                            <constraint firstItem="pki-Eq-e1p" firstAttribute="top" secondItem="x4a-IZ-BE5" secondAttribute="bottom" constant="46" id="ZnH-U1-Yw1"/>
+                            <constraint firstItem="Pbj-a4-jNr" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="d21-Ja-h9S"/>
+                            <constraint firstItem="pki-Eq-e1p" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="lqx-mz-ErC"/>
+                            <constraint firstItem="pki-Eq-e1p" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sqZ-Zn-zyu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="qdC-uj-lNf"/>
+                    <connections>
+                        <outlet property="ActivityIndicator" destination="Pbj-a4-jNr" id="kwW-Xy-k0W"/>
+                        <outlet property="CurrentButton" destination="pki-Eq-e1p" id="C19-SJ-loK"/>
+                        <outlet property="PhoneButton" destination="ol1-3t-YWh" id="dFP-hx-oma"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
